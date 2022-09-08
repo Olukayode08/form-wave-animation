@@ -1,0 +1,88 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    background-color: steelblue;
+}
+.container{
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 20px 40px;
+    border-radius: 10px;
+}
+.container h1{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.container a{
+    text-decoration: none;
+    color: lightblue;
+}
+.container .form-control{
+    position: relative;
+    margin: 20px 0 40px;
+    width: 20em;
+}
+.form-control input{
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px solid #fff;
+    display: block;
+    padding: 15px 0;
+    width: 100%;
+    font-size: 18px;
+    color: white;
+}
+.form-control input:focus, 
+.form-control input:valid{
+    outline: 0;
+    border-bottom-color: lightblue;
+}
+.btn{
+    width: 100%;
+    padding: 15px;
+    cursor: pointer;
+    background: lightblue;
+    border: none;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+.btn:active{
+    transform: scale(0.95);
+}
+.form-control label{
+    position: absolute;
+    top: 15px;
+    left: 0;
+}
+.form-control label span{
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    min-width: 5px;
+    display: inline-block;
+    font-size: 18px;
+}
+.form-control input:focus + label span,
+.form-control input:valid +label span{
+    color: lightblue;
+    transform: translateY(-30px);
+}
+@media screen and (max-width: 800px) {
+    .container{
+        padding: 10px 40px;
+    }
+    .container .form-control {
+        position: relative;
+        margin: 20px 0 40px;
+        width: 16em;
+    }
+}
